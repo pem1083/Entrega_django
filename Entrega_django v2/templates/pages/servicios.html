@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html5>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="{% static './css/style1.css' %}">
+		<link rel="stylesheet" href="{% static './css/servicos_style.css' %}">
+		<link rel="stylesheet" href="{% static './css/clima_btn.css' %}">
+		<link rel="stylesheet" href="{% static './css/menu_burger.css' %}">
+		<link rel="stylesheet" href="{% static './css/servicios-responcive.css' %}">
+		<link rel="icon" href="{% static './media/img/turismo.ico' %}">
+		<title>SERVICIOS</title>
+	</head>
+
+	<body class="body">
+		<header class="header">
+			<nav class="nav-header">
+				<br><center><h1>GENERAL TURISMO</h1></center><br>
+				<button class="menuBurger" onclick="mostrarMenu()">  </button>
+				<ul class="menu-ul">
+					<li><a href="{% url 'index' %}" >INICIO</a></li>
+					<li><a href="{% url 'promociones' %}">PROMOCIONES</a></li>
+					<li><a href="{% url 'nosotros' %}">EMPRESA</a></li>
+					<li><a href="{% url 'contacto' %}">CONTACTO</a></li>         
+				</ul>
+				<br>
+			</nav>
+			
+		</header>
+	
+		<main class="main">
+			
+			<section class="section-img">
+	
+				<div class ="viaja" onclick="mostrarPromo1()"><p>Viaja por el mundo...</p></div>
+				<div class="experiencias" onclick="mostrarPromo2()"><p>Experiencias inolvidables...</p></div>
+				<div class="vuelos" onclick="mostrarPromo3()" ><p>Quere volar barato... </p></div>
+				<div class="escapadas" onclick="mostrarPromo4()" ><p>Escapaditas, el tiempo no es una excusa...</p></div>
+				<div class ="viaja-cl" onclick="promo1()"><p>Viaja por el mundo...</p></div>
+				<div class="experiencias-cl" onclick="promo2()"><p>Experiencias inolvidables...</p></div>
+				<div class="vuelos-cl" onclick="promo3()" ><p>Quere volar barato... </p></div>
+				<div class="escapadas-cl" onclick="promo4()" ><p>Escapaditas, el tiempo no es una excusa...</p></div>
+				<p class="txt-promo">PROMOCIONES</p>
+				
+			</section>	
+			
+		</main>
+	</body>
+
+	<footer class="footer">
+		<ul>
+			<br>
+			®Grupo 19 comisión 23031   -   todos los derechos reservados
+			<br><br>
+		</ul>
+	
+	</footer>
+
+
+<script src="{% static './js/servicios.js' %}" ></script>
+<script src="{% static './js/menu-hamb.js' %}"></script>
+
+</html>
